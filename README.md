@@ -7,7 +7,7 @@
 
 - 🔭 I’m currently dividing in deep learning on bioinfomatics
 - 🌱 I’m currently learning DNA, RNA, single-cell...
-- 📫 How to reach me: Email [201900301049@mail.sdu.edu.cn]
+- 📫 How to reach me: Email [Junru.Jin@UTSouthwestern.edu]
 - ⚡ Fun fact: computer games, genshin impact, anime
 
 <!--
