@@ -7,14 +7,17 @@
 
 - 🔭 I’m currently dividing in deep learning on bioinfomatics
 - 🌱 I’m currently learning DNA, RNA, single-cell...
-- 📫 How to reach me: Email [Junru.Jin@UTSouthwestern.edu]
-- ⚡ Fun fact: computer games, genshin impact, anime
+- 📫 How to reach me: Email [Junru.Jin.cn@gmail.com]
+- ⚡ Fun fact: computer games, anime, chess
 
 <!--
 <img align="right" src="https://github-readme-stats.vercel.app/api?username=FakeEnd&theme=buefy&show_icons=true">
 -->
 
-| [![FakeEnd's github stats](https://github-readme-stats.vercel.app/api?username=FakeEnd)](https://github.com/FakeEnd/github-readme-stats) | [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=FakeEnd&hide=c,assembly,logos,makefile,VHDL,cmake&layout=compact)](https://github.com/FakeEnd/github-readme-stats) |
+![Stats](./profile/stats.svg)
+![Top Languages](./profile/top-langs.svg)
+![Pinned](./profile/pin-readme-tools-github-readme-stats.svg)
+
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="60"> <em><b>I love connecting with different people</b> so if you want to say <b>hi, I'll be happy to meet you more!</b> 🤗</em>
