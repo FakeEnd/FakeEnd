@@ -21,7 +21,7 @@ jobs:
           card: stats
           options: username=${{ github.repository_owner }}&show_icons=true
           path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_STATS_TOKEN }}
 
       - name: Generate top languages card
         uses: readme-tools/github-readme-stats-action@v1
@@ -38,6 +38,25 @@ jobs:
           options: username=readme-tools&repo=github-readme-stats
           path: profile/pin-readme-tools-github-readme-stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validate stats card
+        run: |
+          python3 - <<'PY'
+          import re
+          import xml.etree.ElementTree as ET
+          
+          root = ET.parse("profile/stats.svg").getroot()
+          if root.tag != "{http://www.w3.org/2000/svg}svg":
+              raise SystemExit("Stats card is not a valid SVG.")
+          if root.find(".//*[@data-testid='message']") is not None:
+              raise SystemExit("Stats card contains an API error; refusing to commit.")
+          for metric in ("stars", "commits", "prs", "issues", "contribs"):
+              node = root.find(f".//*[@data-testid='{metric}']")
+              value = "" if node is None else "".join(node.itertext()).strip()
+              if not re.fullmatch(r"[0-9]+(?:[.,][0-9]+)*[kmbt]?", value, re.IGNORECASE):
+                  raise SystemExit(f"Stats card is missing a valid {metric} count.")
+          print("Stats card validation passed.")
+          PY
 
       - name: Commit cards
         run: |
